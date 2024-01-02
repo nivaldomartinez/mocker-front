@@ -6,6 +6,8 @@ import 'prismjs/components/prism-json';
 import 'prismjs/themes/prism-dark.css';
 import Alert from './Alert';
 
+const API_URL = 'https://mocker-api-production.up.railway.app/api'
+
 const jsConfetti = new JSConfetti()
 
 function JSONEditor() {
@@ -23,7 +25,7 @@ function JSONEditor() {
       };
 
       const response = await fetch(
-        'http://localhost:4000/api/sources',
+        `${API_URL}/sources`,
         {
           headers: {
             'Accept': 'application/json',
@@ -71,7 +73,7 @@ function JSONEditor() {
       </div>
       {showAlert && (
         <Alert title=""
-        text={`Success! Your API is available at http://localhost:4000/api/sources/${savedSourceId}`}
+        text={`Success! Your API is available at ${API_URL}/sources/${savedSourceId}`}
         onDismiss={() => setShowAlert(false)} />
       )}
     </>

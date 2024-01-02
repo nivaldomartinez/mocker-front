@@ -4,17 +4,18 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "node dist/server/entry.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^3.0.3",
-    "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/node": "^7.0.3",
+    "@astrojs/react": "^3.0.9",
+    "@astrojs/tailwind": "^5.1.0",
     "@types/react": "^18.2.29",
     "@types/react-dom": "^18.2.14",
-    "astro": "^3.3.2",
+    "astro": "^4.0.8",
     "js-confetti": "^0.11.0",
     "prismjs": "1.29.0",
     "react": "^18.2.0",
