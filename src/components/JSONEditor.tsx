@@ -100,7 +100,7 @@ function JSONEditor() {
   }
   return (
     <>
-      <div className={`rounded-lg overflow-y-scroll h-[400px] max-h-[400px] border ${focus ? 'border-purple-700' : 'border-purple-300'}`}>
+      <div className={`rounded-lg overflow-y-scroll h-[300px] max-h-[300px] border ${focus ? 'border-purple-700' : 'border-purple-300'}`}>
         <Editor
           value={code}
           autoFocus
@@ -116,14 +116,16 @@ function JSONEditor() {
           }}
         />
       </div>
-      <div className="flex justify-center py-8">
+      <div className="flex justify-center gap-2 pt-8">
         <button
         onClick={saveInfo}
         type="button"
         className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-0 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
           Create API
         </button>
-        {isLoading && <Loading />}
+      </div>
+      <div className="h-[35px] text-center">
+          {isLoading && <Loading />}
       </div>
       {alert}
     </>
