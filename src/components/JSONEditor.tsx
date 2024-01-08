@@ -55,7 +55,7 @@ function JSONEditor() {
         };
   
         const response = await fetch(
-          '/save-api',
+          '/api/save-api',
           {
             method: 'POST',
             body: JSON.stringify(body)
@@ -63,7 +63,7 @@ function JSONEditor() {
         )
   
         const { id: API_ID } = await response.json();
-        const apiUrl = `${import.meta.env.PUBLIC_FRONTEND_URL}${API_ID}`
+        const apiUrl = `${import.meta.env.PUBLIC_FRONTEND_URL}api/${API_ID}`
   
         setAlert((
           <Alert title=""
