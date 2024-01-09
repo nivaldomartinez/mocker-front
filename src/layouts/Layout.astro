@@ -48,4 +48,25 @@ const { title } = Astro.props;
 		Courier New,
 		monospace;
 	}
+	/* width */
+	::-webkit-scrollbar {
+	width: 5px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 10px;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	background: #bebebe;
+	border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	background: #888;
+	}
 </style>
