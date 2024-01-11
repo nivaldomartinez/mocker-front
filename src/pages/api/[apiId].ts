@@ -15,5 +15,8 @@ export const GET: APIRoute = async ({ params }) => {
             statusText: 'API not found'
         }) 
     }
-    return new Response(await response.arrayBuffer())
+    const json = await response.json()
+    return new Response(JSON.stringify(json.data), {
+        status: json.statusCode
+    })
 }
