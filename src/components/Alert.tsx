@@ -26,8 +26,8 @@ const Alert: FunctionComponent<AlertProps> = ({
                     <button type="button"
                     className="text-white bg-purple-800 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-purple-200 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center"
                     onClick={() => onCopy(text)}>
-                Copy
-            </button>
+                        Copy
+                    </button>
                 )}
                 <button type="button"
                         className="text-white bg-transparent border border-purple-800 hover:bg-purple-900 hover:text-white focus:ring-0 focus:outline-none font-medium rounded-lg text-xs px-3 py-1.5 text-center"

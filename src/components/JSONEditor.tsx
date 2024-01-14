@@ -119,13 +119,12 @@ function JSONEditor() {
         <ErrorCodeDropdown
           options={errorStatusCodes}
           onSelect={selected => setStatusCode(selected.statusCode)}>
-            <button
-            type="button"
+            <div
             className={`w-28 px-4 py-2 w- text-sm font-medium text-purple-100 bg-transparent border border-purple-100 rounded-e-lg hover:bg-gradient-to-br hover:from-purple-600 hover:to-blue-500 hover:text-white ${
               isError ? 'bg-gradient-to-br from-purple-600 to-blue-500' : ''
             }`}>
               Error {isError ? `(${statusCode})` : ''}
-            </button>
+            </div>
         </ErrorCodeDropdown>
       </div>
     </div>
